@@ -1,8 +1,8 @@
 html,body {
-	background-color: #D3E9D0;
+	background-color: white;
 	font-family: Verdana, Trebuchet MS, Arial, sans-serif;
 	font-size: 10pt;
-	text-align:center;
+	text-align:left;
 }
 
 h1 {
@@ -18,80 +18,48 @@ pre {
 	margin: 0%;
 }
 
-div.upperleft {
-	width: 520px;
-	margin-left: auto;
-	margin-right: auto;
-
-	background-color: #AED7A8;
-	background-image: url('upperleft.png');
-	background-repeat: no-repeat;
-	background-position: top left;
-	text-align:left;
-}
-
-div.upperright {
-	background-image: url('upperright.png');
-	background-repeat: no-repeat;
-	background-position: top right;
-}
-
-div.lowerleft {
-	background-image: url('lowerleft.png');
-	background-repeat: no-repeat;
-	background-position: bottom left;
-}
-
-div.lowerright {
-	background-image: url('lowerright.png');
-	background-repeat: no-repeat;
-	background-position: bottom right;
-	padding: 3% 3% 3% 3%;
-}
-
 #header {
-	width: 520px;
-	height: 204px;
+	width: 400px;
+	height: 170px;
 	margin-left: auto;
 	margin-right: auto;
-	background-image: url(header.jpg);
+    color: green;
 	margin-bottom: 20px;
 }
-#logo a{
-    padding-right:10px;
-    font-weight:bold;
-    font-size:24px;
-    color: white;
-    text-decoration: none;
-    float: right;
-    padding: 5px;	
+#logo a {
+    display:none;
 }
-
-
+#logo-image {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
 #menu ul {
   text-decoration:none;
   margin-right:10px;
   list-style: none;
   padding: 0px;
+  position: relative;
+  top: 120px;
   li {
     border-top: solid;
-    border-top-color: #AED7A8;
-	float: left;
+    border-top-color: #00529B;
+	float: right;
     position: relative;
-    top: 170px;
+    top: 10px;
     margin-right: 10px;
     a {
       font-weight:bold;
       font-size:14px;
-      color: #0CAEC7;
+      color: #00529B;
       display: block;
       padding: 5px 10px;
       text-decoration: none;
-      color: #0B4503;
+      color: #00529B;
     }
     &.selected a, a:hover {
-      background: #0CAEC7;
-      color: #0B4503;
+      background: #00529B;
+      color: white;
     }
   }
 }
