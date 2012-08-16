@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Aaweb::Application.load_tasks
+BliWeb::Application.load_tasks

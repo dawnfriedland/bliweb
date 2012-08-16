@@ -1,3 +1,13 @@
+#body_content {
+  width: 60%;
+  color: #333;
+  padding-top: 170px;
+  padding-left: 20px;
+  position: relative;
+  float: left;
+  width: 500;
+
+}
 html,body {
 	background-color: white;
 	font-family: Verdana, Trebuchet MS, Arial, sans-serif;
@@ -5,72 +15,66 @@ html,body {
 	text-align:left;
 }
 
-h1 {
-	font-size: 14pt;
-	margin: 0%;
-}
-
-acronym {
-	cursor: help;
-}
-
-pre {
-	margin: 0%;
-}
-
 #header {
-	width: 400px;
+    background: url("BLI-DOG-RIGHT.png") no-repeat;
+	width: 100%;
 	height: 170px;
 	margin-left: auto;
 	margin-right: auto;
-    color: green;
 	margin-bottom: 20px;
+    position: absolute;
+    top: 5px;
+    left: 25px;
 }
 #logo a {
     display:none;
 }
-#logo-image {
-    position: absolute;
+#support {
+   position: absolute;
     top: 10px;
-    left: 10px;
+    right: 25px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:14px;
+    color: #00529B;
 }
-#menu ul {
-  text-decoration:none;
-  margin-right:10px;
+nav.menu ul{
   list-style: none;
-  padding: 0px;
-  position: relative;
+  position: absolute;
   top: 120px;
-  li {
-    border-top: solid;
-    border-top-color: #00529B;
-	float: right;
-    position: relative;
-    top: 10px;
-    margin-right: 10px;
-    a {
-      font-weight:bold;
-      font-size:14px;
-      color: #00529B;
-      display: block;
-      padding: 5px 10px;
-      text-decoration: none;
-      color: #00529B;
-    }
-    &.selected a, a:hover {
-      background: #00529B;
-      color: white;
-    }
-  }
+  left: 250px;
+
+	  li {
+	    border-top: solid;
+	    border-top-color: #00529B;
+	    float: right;
+	    margin-right: 15px;
+	    font-weight:bold;
+	    font-size:14px;
+	    }
+	
+	    a {
+	      display: block;
+	      padding: 5px 10px;
+	      text-decoration: none;
+	      color: #00529B;
+	      }
+
+		li.selected a {
+		  color: white;
+		  background: #00529B;
+		}
 }
 
+#menu a:hover {
+     color: white;
+     background: #00529B;
+}
 
 
 #footer {
-	background-image:url(footer.png);
-	text-align:center;
+	text-align:right;
 	width:480px;
 	height:23px;
-	margin-left:auto;
-	margin-right:auto;
+    background-color: red;
 }
