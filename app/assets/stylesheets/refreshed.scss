@@ -1,80 +1,160 @@
-#body_content {
-  width: 60%;
-  color: #333;
-  padding-top: 170px;
-  padding-left: 20px;
-  position: relative;
-  float: left;
-  width: 500;
-
+//------------------------------------
+//	RESET
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{
+	margin:0;
+	padding:0;
 }
+//------------------------------------
+//	BODY
 html,body {
-	background-color: white;
+	background-color: #FFFFFF;
 	font-family: Verdana, Trebuchet MS, Arial, sans-serif;
 	font-size: 10pt;
 	text-align:left;
+	color: #00529B; //BLI blue
+}
+h1 {
+font-size:24px;
+padding-bottom:25px;
+padding-top:25px;
+
 }
 
-#header {
-    background: url("BLI-DOG-RIGHT.png") no-repeat;
-	width: 100%;
-	height: 170px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 20px;
-    position: absolute;
-    top: 5px;
-    left: 25px;
+#body_content {
+  background: #FFFFFF;
+  //border-style: solid;
+  //border-color: #00529B; //BLI blue
+  //border-width: 1px;
+  position: absolute;
+  top: 175px;
+  right: 5px;
+  left: 20px;
+  width:95%;
+  float: left;
+  margin-right:20px;
 }
 #logo a {
     display:none;
 }
-#support {
-   position: absolute;
-    top: 10px;
-    right: 25px;
-    text-decoration:none;
-    font-weight:bold;
-    font-size:14px;
-    color: #00529B;
+#header {
+    background: #FFFFFF;
+    //border-style: solid;
+    //border-color: #00529B; //BLI blue
+    //border-width: 1px;
+	width: 95%;
+	height: 125px;
+    position: absolute;
+    margin-top:20px;
+    margin-left:20px;
 }
-nav.menu ul{
-  list-style: none;
-  position: absolute;
-  top: 120px;
-  left: 250px;
+#logo-header {
+    position:absolute;
+    top:20px;
+    left: 20px;
+    //border-style: solid;
+    //border-width: 1px;
+    //border-color: #00529B; //BLI blue
+    width: 400px;
 
-	  li {
-	    border-top: solid;
-	    border-top-color: #00529B;
-	    float: right;
-	    margin-right: 15px;
-	    font-weight:bold;
-	    font-size:14px;
-	    }
-	
-	    a {
-	      display: block;
-	      padding: 5px 10px;
-	      text-decoration: none;
-	      color: #00529B;
-	      }
-
-		li.selected a {
-		  color: white;
-		  background: #00529B;
-		}
 }
 
-#menu a:hover {
-     color: white;
-     background: #00529B;
+//from http://csswizardry.com/2011/02/creating-a-pure-css-dropdown-menu/
+//------------------------------------
+//	NAV
+#menu{
+	//font-weight:bold;
+	margin-bottom:10px;
+	//float:right;
+	//width:100%;
+	position: absolute;
+	top: 120px;
+	left:200px;
+    z-index:5;
+    //border:solid;
+
+}
+#menu li{
+    list-style:none;
+	float:left;
+	margin-right:10px;
+	position:relative;
+}
+#menu a{
+    font-weight:2px;
+	padding:2px;
+	text-decoration:none;
+	border-top: solid;
+	border-width: 1px;
+	border-top-color: #466FD5; // menu blue
+	color: #00529B; //BLI blue
+	display: block;
+	float: left;
+	width:100px;
+	text-align:center;
+}
+
+#menu li.selected a{
+	background: #00529B; //BLI blue
+	color: #FFFFFF; //white
+}
+
+//------------------------------------
+//	DROPDOWN
+
+#menu ul ul{
+	background:#00529B; // Adding a background makes the dropdown work properly in IE7+.
+	background:rgba(255,255,255,0); // make the background fully transparent where we can
+	list-style:none;
+	position:absolute;
+	left:-9999px; // Hide off-screen when not needed (this is more accessible than display:none;)
+}
+#menu ul ul li{
+	padding-top:1px; //give the illusion spaced items
+}
+#menu ul ul a{
+	white-space:nowrap; // Stop text wrapping and creating multi-line dropdown items
+    width:200px;
+	text-align:left;
+}
+#menu ul li:hover ul{ // Display the dropdown on hover
+	left:0; // Bring back on-screen when needed
+	top:21px;
+}
+#menu ul li:hover a{ // create persistent hover state for top-most link when your cursor has moved down the list.
+    background: #466FD5; // menu blue
+    color: #FFFFFF;
+}
+#menu ul li:hover ul a{ //persistent hover state creates global style for links even before they're hovered. Here we undo these effects.
+	text-decoration:none;
+	float:left;
+}
+#menu ul li:hover ul li a:hover{ // define most explicit hover states
+	background: #00529B; //BLI blue
+}
+//------------------------------------
+//CONTACT
+.inquiries-table{
+  padding: 5px;
+  align:right;
+}
+.inquiries-label{
+  padding: 5px;
+  align:right;
+  vertical-align:top;
+  width:100px;
+}
+.inquiries-form{
+  padding: 5px;
+  align:left;
+  width:300px;
 }
 
 
-#footer {
-	text-align:right;
-	width:480px;
-	height:23px;
-    background-color: red;
+//------------------------------------
+//	FOOTER
+
+#page_container footer {
+width:100px;
+//border:solid
+display: none;
 }
