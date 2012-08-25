@@ -1,3 +1,4 @@
+ENV['RAILS_ENV'] ||= 'test'
 BliWeb::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
