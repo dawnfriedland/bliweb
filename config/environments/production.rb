@@ -69,16 +69,16 @@ BliWeb::Application.configure do
   
   # config.action_mailer.raise_delivery_errors = false
   # config.action_mailer.perform_deliveries = true
-   config.action_mailer.delivery_method = :smtp
+#   config.action_mailer.delivery_method = :smtp
   
-   config.action_mailer.smtp_settings = {
-     address:         "smtp.gmail.com",
-     port:            "587",
-     domain:          "barklouder.com",
-     authentication:  :login,
-     outgoing_address: "info@barklouder.com",
-     user_name:       'info@barklouder.com',
-     password:        'Tiptoethroughtulips'
-   }
+   # config.action_mailer.smtp_settings = {
+   #   address:         "smtp.gmail.com",
+   #   port:            "587",
+   #   domain:          "barklouder.com",
+   #   authentication:  :login,
+   #   outgoing_address: "info@barklouder.com",
+   #   user_name:       'info@barklouder.com',
+   #   password:        'Tiptoethroughtulips'
+   # }
   
 end
