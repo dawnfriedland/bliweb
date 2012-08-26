@@ -156,7 +156,16 @@ padding-top:25px;
 //	FOOTER
 
 #page_container footer {
-width:100px;
-//border:solid
-display: none;
+  background: #FFFFFF;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  position: absolute;
+  bottom: 10px;
+  float: bottom;
+  width: 550px;
+  margin-left:20px;
 }
+
