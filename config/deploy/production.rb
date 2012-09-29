@@ -1,6 +1,6 @@
 set :application, "bliweb"
 set :domain, "75.147.182.89" 
-set :repository,  "git@github.com:dawnfriedland/bliweb.git"
+set :repository,  "git@github.com:reneedv/bliweb.git"
 set :use_sudo,    false
 set :deploy_to, "/home/www-publisher/www/bliweb" 
 set :scm,         "git"
@@ -20,9 +20,9 @@ namespace :rvm do
   end
 end
 
-namespace :links do
-  task :generate_symbolic_links, :roles => :app do
-    run "cd #{current_release} && ln -s /home/www-publisher/www/bliweb/shared/logs logs"
+namespace :db do
+  task :cp_db_config, :roles => :app do
+    run "cp /home/www-publisher/bliweb/config/database.yml #{current_release}/config/"
   end
 end
 
@@ -38,8 +38,9 @@ namespace :deploy do
   desc "Restart Application"
   task :restart, :roles => :app do
     run "touch #{current_release}/tmp/restart.txt"
-  end
+  end 
 end
 
+before "deploy:assets:precompile", "db:cp_db_config"
 after "deploy", "rvm:trust_rvmrc"
-#after "deploy", "links:generate_symbolic_links"
+
