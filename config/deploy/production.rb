@@ -1,8 +1,8 @@
 set :application, "bliweb"
-set :domain, "75.147.182.89" 
-set :repository,  "git@github.com:reneedv/bliweb.git"
+set :domain, "75.147.182.89"
+set :repository,  "git@github.com:dawnfriedland/bliweb.git"
 set :use_sudo,    false
-set :deploy_to, "/home/www-publisher/www/bliweb" 
+set :deploy_to, "/home/www-publisher/www/bliweb"
 set :scm,         "git"
 set :user,        "www-publisher"
 
@@ -38,7 +38,7 @@ namespace :deploy do
   desc "Restart Application"
   task :restart, :roles => :app do
     run "touch #{current_release}/tmp/restart.txt"
-  end 
+  end
 end
 
 before "deploy:assets:precompile", "db:cp_db_config"
